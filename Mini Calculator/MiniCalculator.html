@@ -1,0 +1,74 @@
+<!-- Create a mini calculator application, which has following functionalities
+Addition
+Subtraction
+Division
+Multiplication
+Your app should have
+Two input boxes which should take two numbers from the user.
+Four Buttons with following text content
+Add
+Subtract
+Divide
+Multiply
+When user enter 2 and 4 and clicks on multiply button, an alert should come with 8 as ans
+When user enter 8 and 4 and clicks on Divide button,an alert should come with 2 as ans -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Calculator</title>
+    <link rel="stylesheet" href="MiniCalculator.css">
+</head>
+<body>
+
+    <h1>Mini Calculator Masai</h1>
+    <div>
+        <div id="input-div">
+            <input id="1st-no" type="number" placeholder="Enter 1st number">
+            <input id="2nd-no" type="number" placeholder="Enter 2nd number">
+        </div>
+        <div id="btn-div">
+            <button id="add">Add</button>
+            <button id="sub">Subtract</button>
+            <button id="multi">Multiply</button>
+            <button id="divide">Divide</button>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    let  input1=document.getElementById("1st-no");
+    let  input2=document.getElementById("2nd-no");
+
+    let btns=document.querySelectorAll("#btn-div>button");
+
+    let total=0;
+
+
+    for(let i=0; i<btns.length; i++){
+        btns[i].addEventListener('click',function(){
+            switch(btns[i].innerText){
+                case "Add":
+                    total=Number(input1.value)+Number(input2.value);
+                    alert(total);
+                    return;
+                case "Subtract":
+                    total=Number(input1.value)-Number(input2.value);
+                    alert(total);
+                    return; 
+                case "Multiply":
+                    total=Number(input1.value)*Number(input2.value);
+                    alert(total);
+                    return; 
+                case "Divide":
+                    total=Number(input1.value)/Number(input2.value);
+                    alert(total);
+                    return;                 
+            }
+        })
+    }
+
+</script>
