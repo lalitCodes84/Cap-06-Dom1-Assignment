@@ -1,0 +1,107 @@
+<!-- Complete all the functions by creating a copy of the above template with the file name registration.html -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+</head>
+<body>
+
+	<!-- All input tags -->
+
+	<input type="text" name="name" id="name" placeholder="Enter Name">
+	<select id="gender" >
+		<option value="">Select gender</option>
+		<option value="Male">Male</option>
+		<option value="Female">Female</option>
+	</select>
+	<input type="text" name="email" id="email" placeholder="Enter mail-id">
+	<input type="text" name="mobile" id="mobile" placeholder="Enter Ph-No">
+	<hr>
+	<h1 id="dName">NAME</h1>
+	<h2 id="dGender">GENDER</h2>
+	<h3 id="dEmail">EMAIL</h3>
+	<h4 id="dMobile">MOBILE</h4>
+	<hr>
+	<button onclick="showName()">NAME</button>
+	<button onclick="showGender()">GENDER</button>
+	<button onclick="showEmail()">EMAIL</button>
+	<button onclick="showMobile()">MOBILE</button>
+	<button onclick="resetForm()">RESET FORM</button>
+	<button onclick="resetDisplay()">RESET DISPLAY</button>
+	<script type="text/javascript">
+		function showName() {
+			// Show the selected name inside h1
+			let dName = document.getElementById("dName");
+			let inputN = document.getElementById("name");
+
+			
+
+			return dName.innerText=inputN.value;
+		}
+
+		function showGender() {
+			// Show the selected gender inside h2
+			let dGender = document.getElementById("dGender");
+			let inputG = document.getElementById("gender");
+
+			return dGender.innerText=inputG.value;
+
+		}
+
+		function showEmail() {
+			// Show the filled email inside h3
+			let dEmail = document.getElementById("dEmail");
+			let inputE = document.getElementById("email");
+
+			return dEmail.innerText=inputE.value;
+		}
+
+		function showMobile() {
+			// Show the filled mobile inside h4
+			let dMobile = document.getElementById("dMobile");
+			let inputM = document.getElementById("mobile");
+
+			return dMobile.innerText=inputM.value;
+		}
+
+		function resetForm() {
+			// Reset all the form elements to default values (blank "")
+			// Input value and display text of name 
+			let inputN = document.getElementById("name");
+				inputN.value ="";
+				dName.innerText="NAME";
+				// Input value and display text of gender
+			let inputG = document.getElementById("gender");
+				inputG.value="";
+				dGender.innerText="GENDER";
+				// Input value and display text of email
+			let inputE = document.getElementById("email");
+				inputE.value="";
+				dEmail.innerText="EMAIL";
+				// Input value and display text of mobile
+			let inputM = document.getElementById("mobile");
+			    inputM.value="";
+				dMobile.innerText="MOBILE";
+
+
+		}
+
+		function resetDisplay() {
+			// Reset all the headings (h1, h2, h3, h4) to blank values
+			let dName = document.getElementById("dName");
+			    dName.innerText="";
+				// Input value and display text of gender
+			let dGender = document.getElementById("dGender");
+			    dGender.innerText="";
+				// Input value and display text of email
+			let dEmail = document.getElementById("dEmail");
+			    dEmail.innerText="";
+				// Input value and display text of mobile
+			let dMobile = document.getElementById("dMobile");
+			    dMobile.innerText="";
+		}
+	</script>
+</body>
+</html>
